@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block cuerpo %}
+    <h1>Template de Compuestps</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Compuestos</th>
+                <th>formula</th>
+                <th>Molar Mass</th>
+                <th>Density</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for compound in object_list %}
+            <tr>
+                
+                <td>{{ compound.name }}</td>
+                <td>{{ compound.formula }}</td>
+                <td>{{ compound.molar_mass }}</td>
+                <td>{{ compound.density }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endblock cuerpo %}
+
+
+    
+</body>
+</html>
